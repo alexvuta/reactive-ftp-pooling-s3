@@ -1,0 +1,21 @@
+vuta:
+  ftp:
+    username: vuta
+    password: vuta
+    server: 100.000.000.000
+    port: 21
+    reconnectionRetries: 3
+    poolInterval: 100000 # value in milliseconds
+    deleteAfterPool: true
+  aws:
+    s3:
+      bucketName: my-index-bucket
+spring:
+  jmx:
+    enabled: false
+  main:
+    web-environment: false
+#debug: true
+#trace: true
+logging:
+  file: myapplication.log

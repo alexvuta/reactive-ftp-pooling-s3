@@ -1,0 +1,32 @@
+vuta:
+  ftp:
+    username: vuta
+    password: vuta
+    server: 00.00.00.00
+    port: 21
+    path: /
+    poolInterval: 100000 # value in milliseconds
+    deleteAfterPool: false
+  aws:
+    s3:
+      bucketName: pooling-files
+      
+  flux:
+    s3:
+      concurrency: 2
+      backpressureSize: 1000
+      distinctionEnabled: true 
+    ftp:
+      concurrency: 10
+      backpressureSize: 100000
+      distinctionEnabled: true 
+spring:
+  jmx:
+    enabled: false
+  main:
+    web-environment: false
+    web-application-type: none
+#debug: true
+#trace: true
+logging:
+  file: pooler-trace-log.log
